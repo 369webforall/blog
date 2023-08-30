@@ -7,7 +7,7 @@ const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
   const isLoggedIn = useSelector((state) => state.isLoggedIn);
   const sendRequest = async () => {
-    const res = await axios.get('http://localhost:5000/api/blog');
+    const res = await axios.get('https://blog-k26u.onrender.com/api/blog');
     const data = await res.data;
     return data;
   };

@@ -8,7 +8,7 @@ export default function Card({ id, title, description, image, isUser }) {
 
   const deleteRequest = async () => {
     const res = await axios
-      .delete(`http://localhost:5000/api/blog/delete/${id}`)
+      .delete(`https://blog-k26u.onrender.com/api/blog/delete/${id}`)
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;

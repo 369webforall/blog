@@ -17,7 +17,7 @@ const UpdateBlog = () => {
   };
   const fetchBlog = async () => {
     const res = await axios
-      .get(`http://localhost:5000/api/blog/${id}`)
+      .get(`https://blog-k26u.onrender.com/api/blog/${id}`)
       .catch((err) => console.log(err));
 
     const data = await res.data;
@@ -36,7 +36,7 @@ const UpdateBlog = () => {
 
   const sendRequest = async () => {
     const res = await axios
-      .put(`http://localhost:5000/api/blog/update/${id}`, {
+      .put(`https://blog-k26u.onrender.com/api/blog/update/${id}`, {
         title: input.title,
         description: input.description,
       })
